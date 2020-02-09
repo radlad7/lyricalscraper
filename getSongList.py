@@ -57,7 +57,7 @@ with open(linkSave, 'w') as fileSave:
 
 
 
-############################### Part 2: Loop Thry Links, Save Lyrics, Format & Append to .Txt ####################################			
+############################### Part 2: Loop Thru Links, Save Lyrics, Format & Append to .Txt ####################################			
 
 # Read links from text file and load them into Py Array
 with open(linkSave, "r", encoding="utf-8") as links:
@@ -109,10 +109,10 @@ with open(lyricSave, 'w', encoding='utf_8') as saveLyrics:
 			songFinished.write(line  + "\n")
 		songFinished.close()
 		
-		# Resave Song link file - currently finished song. By end this file should be blank and done should be what original lyric file was.
+		# Resave Song link file - currently finished song. By end this file should be blank
+		# and done .txt file should have what original lyric file was.
 		resaveLinks = open(linkSave).readlines()
 		with open(linkSave, "w", encoding="utf-8") as linkResave:
 			linkResave.writelines(resaveLinks[1:])
 		linkResave.close()
-		
 saveLyrics.close()
